@@ -7,47 +7,80 @@ st.title("Urban Gardening – Plant Recommender 🌱")
 space = st.selectbox("Select your available space:", ["Balcony", "Terrace", "Window"])
 sunlight = st.selectbox("How much sunlight does your space get?", ["High", "Medium", "Low"])
 watering = st.selectbox("How often can you water the plants?", ["Daily", "Every 2 Days", "Weekly"])
-experience = st.selectbox("Gardening experience:", ["Beginner", "Intermediate", "Advanced"])
+
 # Sample plant dataset
-plant_data = [
-    {
-        "name": "Tulsi",
-        "space": ["Balcony", "Window"],
-        "sunlight": "High",
-        "watering": "Daily",
-        "how_to_grow": "Use a small pot with drainage holes and place in a sunny spot.",
-        "when_to_grow": "Throughout the year",
-        "care": "Water daily and trim regularly."
-    },
+plants_data = [
     {
         "name": "Mint",
-        "space": ["Balcony", "Terrace"],
-        "sunlight": "Medium",
-        "watering": "Every 2 Days",
-        "how_to_grow": "Plant cuttings in a pot with moist soil. Keep partially shaded.",
-        "when_to_grow": "Spring to Early Summer",
-        "care": "Water when topsoil is dry."
+        "space": ["Balcony", "Window"],
+        "sunlight": ["Medium", "High"],
+        "water": ["Medium"],
+        "details": "Grows well in pots. Keep moist. Harvest frequently.",
     },
     {
         "name": "Coriander",
-        "space": ["Balcony", "Window", "Terrace"],
-        "sunlight": "Medium",
-        "watering": "Daily",
-        "how_to_grow": "Sow seeds in moist soil. Keep in semi-sunlight.",
-        "when_to_grow": "October to March",
-        "care": "Thin seedlings and water daily."
+        "space": ["Window", "Balcony"],
+        "sunlight": ["Medium"],
+        "water": ["Low", "Medium"],
+        "details": "Easy to grow. Water every other day. Use fresh leaves.",
+    },
+    {
+        "name": "Spinach",
+        "space": ["Balcony", "Terrace"],
+        "sunlight": ["Low", "Medium"],
+        "water": ["Medium"],
+        "details": "Grows quickly. Keep soil moist and partial sunlight.",
     },
     {
         "name": "Aloe Vera",
+        "space": ["Window", "Terrace"],
+        "sunlight": ["High"],
+        "water": ["Low"],
+        "details": "Medicinal plant. Needs full sun. Water weekly.",
+    },
+    {
+        "name": "Tomato",
+        "space": ["Balcony", "Terrace"],
+        "sunlight": ["High"],
+        "water": ["High"],
+        "details": "Requires strong sunlight. Regular watering. Use deep pots.",
+    },
+    {
+        "name": "Chili",
+        "space": ["Terrace", "Balcony"],
+        "sunlight": ["High"],
+        "water": ["Medium"],
+        "details": "Spicy plant. Needs sunlight. Avoid overwatering.",
+    },
+    {
+        "name": "Tulsi (Basil)",
+        "space": ["Window", "Balcony"],
+        "sunlight": ["Medium", "High"],
+        "water": ["Medium"],
+        "details": "Sacred and medicinal. Easy to grow. Daily watering.",
+    },
+    {
+        "name": "Fenugreek (Methi)",
+        "space": ["Balcony"],
+        "sunlight": ["Medium"],
+        "water": ["Medium"],
+        "details": "Short growth cycle. Good for indoor pots.",
+    },
+    {
+        "name": "Lettuce",
+        "space": ["Window", "Balcony"],
+        "sunlight": ["Low", "Medium"],
+        "water": ["High"],
+        "details": "Cool weather crop. Needs frequent watering.",
+    },
+    {
+        "name": "Curry Leaves",
         "space": ["Terrace"],
-        "sunlight": "High",
-        "watering": "Weekly",
-        "how_to_grow": "Use sandy soil and keep in direct sun.",
-        "when_to_grow": "All year round",
-        "care": "Do not overwater."
-    }
+        "sunlight": ["High"],
+        "water": ["Medium"],
+        "details": "Aromatic leaves. Needs full sun and weekly watering.",
+    },
 ]
-
 st.button("Get Plant Suggestions")
 
 # Filter logic
