@@ -9,7 +9,7 @@ sunlight = st.selectbox("How much sunlight does your space get?", ["High", "Medi
 watering = st.selectbox("How often can you water the plants?", ["Daily", "Every 2 Days", "Weekly"])
 
 # Sample plant dataset
-plants_data = [
+plant_data = [
     {
         "name": "Mint",
         "space": ["Balcony", "Window"],
