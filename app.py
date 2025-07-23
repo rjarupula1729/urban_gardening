@@ -12,7 +12,8 @@ plants_data = [
         "sunlight": ["partial", "full"],
         "water": ["low", "medium"],
         "image": "https://media.gettyimages.com/id/1359257193/photo/lush-green-aromatic-holy-basil-plant-looking-magnificent-ocimum-tenuiflorum-lamiaceae-family.jpg?s=1024x1024&w=gi&k=20&c=Oi-lKtpWM_QqLP1-8C8BaxUJPohjkMktZjBRKk62EvM=",
-        "care": "Water twice a week. Needs sunlight 3-4 hrs/day."
+        "care": "Water twice a week. Needs sunlight 3-4 hrs/day.",
+        "uses": "Boosts immunity, reduces stress, supports respiratory health."
     },
     {
         "name": "Coriander",
@@ -20,7 +21,8 @@ plants_data = [
         "sunlight": ["partial"],
         "water": ["medium"],
         "image": "https://media.gettyimages.com/id/1264427026/photo/growing-parsley-in-the-garden.jpg?s=1024x1024&w=gi&k=20&c=bAH7eFAQpOQZy5FXcUZiUB6Ifzc3avvv-V4Nk28r5W4=",
-        "care": "Grows fast. Harvest leaves regularly."
+        "care": "Grows fast. Harvest leaves regularly.",
+        "uses": "Rich in antioxidants, lowers blood sugar, good for skin."
     },
     {
         "name": "Mint (Pudina)",
@@ -28,7 +30,8 @@ plants_data = [
         "sunlight": ["partial", "shade"],
         "water": ["medium", "high"],
         "image": "https://media.gettyimages.com/id/1216984727/photo/fresh-mint-plant-ayurveda-herb-organic.jpg?s=1024x1024&w=gi&k=20&c=n3pRwE6JoR_OuyWajGZhAdFf1PGedmRgGtx2UYrhUh0=",
-        "care": "Water regularly. Pinch tops to grow more leaves."
+        "care": "Water regularly. Pinch tops to grow more leaves.",
+        "uses": "Aids digestion, freshens breath, soothes headaches."
     },
     {
         "name": "Tomato",
@@ -36,7 +39,8 @@ plants_data = [
         "sunlight": ["full"],
         "water": ["high"],
         "image": "https://media.gettyimages.com/id/171579643/photo/tomato-greenhouse.jpg?s=1024x1024&w=gi&k=20&c=TUr8artCrHjk5XzhuVJJ-USZwG9jljF8wsnEWjtJ4oQ=",
-        "care": "Needs daily watering. Support plant with stick."
+        "care": "Needs daily watering. Support plant with stick.",
+        "uses": "Rich in Vitamin C, heart-healthy, improves skin health."
     },
     {
         "name": "Aloe Vera",
@@ -44,7 +48,8 @@ plants_data = [
         "sunlight": ["full", "partial"],
         "water": ["low"],
         "image": "https://media.gettyimages.com/id/182784203/photo/aloe-vera-plant.jpg?s=1024x1024&w=gi&k=20&c=G6kbUDlYoHnKT-tURnC-5cYL6bkJBd5xA6dpOkTpM40=",
-        "care": "Very low maintenance. Water weekly."
+        "care": "Very low maintenance. Water weekly.",
+        "uses": "Soothes skin, supports digestion, improves oral health."
     },
     {
         "name": "Spinach",
@@ -52,7 +57,8 @@ plants_data = [
         "sunlight": ["partial"],
         "water": ["medium"],
         "image": "https://media.gettyimages.com/id/169983791/photo/spinach.jpg?s=1024x1024&w=gi&k=20&c=FMh28QJl8meUK-1VKwQGa5RpjsIovUzy6amDZmypPzA=",
-        "care": "Harvest in 30 days. Water every 2-3 days."
+        "care": "Harvest in 30 days. Water every 2-3 days.",
+        "uses": "Rich in iron, improves eyesight, boosts energy."
     },
     {
         "name": "Chili Plant",
@@ -60,7 +66,8 @@ plants_data = [
         "sunlight": ["full"],
         "water": ["medium"],
         "image": "https://media.gettyimages.com/id/154276389/photo/red-green-peppers.jpg?s=1024x1024&w=gi&k=20&c=hgbR1owIXqTNoviiA-EwSr3pW4Kap74ya-y-37o5ssU=",
-        "care": "Fertilize monthly. Keep in sunlight."
+        "care": "Fertilize monthly. Keep in sunlight.",
+        "uses": "Not Available"
     },
     {
         "name": "Lemongrass",
@@ -68,7 +75,8 @@ plants_data = [
         "sunlight": ["full"],
         "water": ["medium", "high"],
         "image": "https://media.gettyimages.com/id/2161967118/photo/lemongrass.jpg?s=1024x1024&w=gi&k=20&c=ntAwP5Zg0JJ4sCQ-blrd91rXw1qZ3VDHjlEe0Vek0x8=",
-        "care": "Harvest leaves. Grows tall, so needs big pot."
+        "care": "Harvest leaves. Grows tall, so needs big pot.",
+        "uses": "Relieves anxiety, boosts immunity, detoxifies the body."
     },
     {
         "name": "Curry Leaves (Kadi Patta)",
@@ -76,7 +84,8 @@ plants_data = [
         "sunlight": ["full"],
         "water": ["medium"],
         "image": "https://media.gettyimages.com/id/1150140818/photo/curry-leaf-plant.jpg?s=1024x1024&w=gi&k=20&c=KFPSY-Dk686ho8NrSBg7yxPvliznuUnyBaavATbQWxU=",
-        "care": "Needs sunlight. Prune regularly."
+        "care": "Needs sunlight. Prune regularly.",
+        "uses": "Good for eyesight, supports hair growth, anti-inflammatory."
     },
     {
         "name": "Ginger",
@@ -84,7 +93,8 @@ plants_data = [
         "sunlight": ["partial"],
         "water": ["medium", "high"],
         "image": "https://media.gettyimages.com/id/128112512/photo/pile-of-ginger-root-on-green-placemat.jpg?s=1024x1024&w=gi&k=20&c=Lxbo7S7XuaGmfz0e3ECPDbeBB1_NzTFvuIP8qp9mXIE=",
-        "care": "Use grow bag. Keep soil moist."
+        "care": "Use grow bag. Keep soil moist.",
+        "uses": "Ginger is a fragrant kitchen spice."
     }
 ]
 
@@ -111,6 +121,7 @@ if st.button("Suggest Plants 🌱"):
                 st.write(f"**Space:** {', '.join(plant['space'])}")
                 st.write(f"**Sunlight:** {', '.join(plant['sunlight'])}")
                 st.write(f"**Water Needs:** {', '.join(plant['water'])}")
+                st.markdown(f"**Health Uses:** {plant['uses']}")
                 st.write(f"**Care Instructions:** {plant['care']}")
                 st.markdown("---")
         else:
