@@ -83,7 +83,7 @@ plants_data = [
         "space": ["balcony", "terrace"],
         "sunlight": ["partial"],
         "water": ["medium", "high"],
-        "image": "https://media.gettyimages.com/id/128112512/photo/pile-of-ginger-root-on-green-placemat.jpg?s=1024x1024&w=gi&k=20&c=Lxbo7S7XuaGmfz0e3ECPDbeBB1_NzTFvuIP8qp9mXIE="
+        "image": "https://media.gettyimages.com/id/128112512/photo/pile-of-ginger-root-on-green-placemat.jpg?s=1024x1024&w=gi&k=20&c=Lxbo7S7XuaGmfz0e3ECPDbeBB1_NzTFvuIP8qp9mXIE=",
         "care": "Use grow bag. Keep soil moist."
     }
 ]
@@ -106,7 +106,7 @@ if st.button("Suggest Plants 🌱"):
         if matched_plants:
             st.success(f"Found {len(matched_plants)} suitable plants!")
             for plant in matched_plants:
-                st.image(plant["image"], width=300, caption=plant["name"])
+                st.image(plant["image"], width=300)
                 st.markdown(f"### 🌿 {plant['name']}")
                 st.write(f"**Space:** {', '.join(plant['space'])}")
                 st.write(f"**Sunlight:** {', '.join(plant['sunlight'])}")
