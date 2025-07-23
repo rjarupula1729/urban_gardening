@@ -1,104 +1,106 @@
 import streamlit as st
 
-# Title
-st.title("Urban Gardening – Plant Recommender 🌱")
+# 1. Title
+st.title("🌿 Urban Gardening Helper")
+st.subheader("Find plants suitable for your urban space 🌇")
 
-# User Inputs
-space = st.selectbox("Select your available space:", ["Balcony", "Terrace", "Window"])
-sunlight = st.selectbox("How much sunlight does your space get?", ["High", "Medium", "Low"])
-watering = st.selectbox("How often can you water the plants?", ["Daily", "Every 2 Days", "Weekly"])
-
-# Sample plant dataset
-plant_data = [
+# 2. JSON-like plant database
+plants_data = [
     {
-        "name": "Mint",
-        "space": ["Balcony", "Window"],
-        "sunlight": ["Medium", "High"],
-        "water": ["Medium"],
-        "details": "Grows well in pots. Keep moist. Harvest frequently.",
+        "name": "Tulsi (Holy Basil)",
+        "space": ["balcony", "window", "terrace"],
+        "sunlight": ["partial", "full"],
+        "water": ["low", "medium"],
+        "care": "Water twice a week. Needs sunlight 3-4 hrs/day."
     },
     {
         "name": "Coriander",
-        "space": ["Window", "Balcony"],
-        "sunlight": ["Medium"],
-        "water": ["Low", "Medium"],
-        "details": "Easy to grow. Water every other day. Use fresh leaves.",
+        "space": ["balcony", "terrace", "window"],
+        "sunlight": ["partial"],
+        "water": ["medium"],
+        "care": "Grows fast. Harvest leaves regularly."
     },
     {
-        "name": "Spinach",
-        "space": ["Balcony", "Terrace"],
-        "sunlight": ["Low", "Medium"],
-        "water": ["Medium"],
-        "details": "Grows quickly. Keep soil moist and partial sunlight.",
-    },
-    {
-        "name": "Aloe Vera",
-        "space": ["Window", "Terrace"],
-        "sunlight": ["High"],
-        "water": ["Low"],
-        "details": "Medicinal plant. Needs full sun. Water weekly.",
+        "name": "Mint (Pudina)",
+        "space": ["balcony", "window", "terrace"],
+        "sunlight": ["partial", "shade"],
+        "water": ["medium", "high"],
+        "care": "Water regularly. Pinch tops to grow more leaves."
     },
     {
         "name": "Tomato",
-        "space": ["Balcony", "Terrace"],
-        "sunlight": ["High"],
-        "water": ["High"],
-        "details": "Requires strong sunlight. Regular watering. Use deep pots.",
+        "space": ["terrace", "balcony"],
+        "sunlight": ["full"],
+        "water": ["high"],
+        "care": "Needs daily watering. Support plant with stick."
     },
     {
-        "name": "Chili",
-        "space": ["Terrace", "Balcony"],
-        "sunlight": ["High"],
-        "water": ["Medium"],
-        "details": "Spicy plant. Needs sunlight. Avoid overwatering.",
+        "name": "Aloe Vera",
+        "space": ["balcony", "window"],
+        "sunlight": ["full", "partial"],
+        "water": ["low"],
+        "care": "Very low maintenance. Water weekly."
     },
     {
-        "name": "Tulsi (Basil)",
-        "space": ["Window", "Balcony"],
-        "sunlight": ["Medium", "High"],
-        "water": ["Medium"],
-        "details": "Sacred and medicinal. Easy to grow. Daily watering.",
+        "name": "Spinach",
+        "space": ["terrace", "balcony"],
+        "sunlight": ["partial"],
+        "water": ["medium"],
+        "care": "Harvest in 30 days. Water every 2-3 days."
     },
     {
-        "name": "Fenugreek (Methi)",
-        "space": ["Balcony"],
-        "sunlight": ["Medium"],
-        "water": ["Medium"],
-        "details": "Short growth cycle. Good for indoor pots.",
+        "name": "Chili Plant",
+        "space": ["terrace", "balcony"],
+        "sunlight": ["full"],
+        "water": ["medium"],
+        "care": "Fertilize monthly. Keep in sunlight."
     },
     {
-        "name": "Lettuce",
-        "space": ["Window", "Balcony"],
-        "sunlight": ["Low", "Medium"],
-        "water": ["High"],
-        "details": "Cool weather crop. Needs frequent watering.",
+        "name": "Lemongrass",
+        "space": ["terrace"],
+        "sunlight": ["full"],
+        "water": ["medium", "high"],
+        "care": "Harvest leaves. Grows tall, so needs big pot."
     },
     {
-        "name": "Curry Leaves",
-        "space": ["Terrace"],
-        "sunlight": ["High"],
-        "water": ["Medium"],
-        "details": "Aromatic leaves. Needs full sun and weekly watering.",
+        "name": "Curry Leaves (Kadi Patta)",
+        "space": ["terrace", "balcony"],
+        "sunlight": ["full"],
+        "water": ["medium"],
+        "care": "Needs sunlight. Prune regularly."
     },
+    {
+        "name": "Ginger",
+        "space": ["balcony", "terrace"],
+        "sunlight": ["partial"],
+        "water": ["medium", "high"],
+        "care": "Use grow bag. Keep soil moist."
+    }
 ]
-st.button("Get Plant Suggestions")
 
-# Filter logic
-matched_plants = []
-for plant in plant_data:
-    if (space in plant["space"]) and (sunlight == plant["sunlight"]) and (watering == plant["watering"]):
-        matched_plants.append(plant)
+# 3. User Input
+space = st.selectbox("Where do you want to grow?", ["Select", "balcony", "terrace", "window"])
+sunlight = st.selectbox("How much sunlight do you get?", ["Select", "full", "partial", "shade"])
+water = st.selectbox("How much water can you provide?", ["Select", "low", "medium", "high"])
 
-# Display results
-st.subheader("Suggested Plants for You 🌿")
+# 4. Button and Matching Logic
+if st.button("Suggest Plants 🌱"):
+    if "Select" in [space, sunlight, water]:
+        st.warning("Please choose all 3 options.")
+    else:
+        matched_plants = []
+        for plant in plants_data:
+            if space in plant["space"] and sunlight in plant["sunlight"] and water in plant["water"]:
+                matched_plants.append(plant)
 
-if matched_plants:
-    for plant in matched_plants:
-        st.markdown(f"### 🌼 {plant['name']}")
-        st.markdown(f"**How to Grow:** {plant['how_to_grow']}")
-        st.markdown(f"**Best Time to Grow:** {plant['when_to_grow']}")
-        st.markdown(f"**Care Tips:** {plant['care']}")
-        st.markdown("---")
-else:
-    st.warning("Sorry, we couldn't find a perfect match. Try changing your inputs.")
-
+        if matched_plants:
+            st.success(f"Found {len(matched_plants)} suitable plants!")
+            for plant in matched_plants:
+                st.markdown(f"### 🌿 {plant['name']}")
+                st.write(f"**Space:** {', '.join(plant['space'])}")
+                st.write(f"**Sunlight:** {', '.join(plant['sunlight'])}")
+                st.write(f"**Water Needs:** {', '.join(plant['water'])}")
+                st.write(f"**Care Instructions:** {plant['care']}")
+                st.markdown("---")
+        else:
+            st.error("No matching plants found for this combination.")
