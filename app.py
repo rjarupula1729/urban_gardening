@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 from datetime import date
-from streamlit_autorefresh import st_autorefresh
+#from streamlit_autorefresh import st_autorefresh
 import time
 
 # Title
